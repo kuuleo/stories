@@ -1,0 +1,3 @@
+# MP20 Take all of the controllers that are in the chat namespace and move them to the base directory...
+
+... There may already be a controller that is there that is similar or serves the same purpose.  For example, I have a contact_requests_controller inside of the chat directory.  I also have a connect_requests controller in the my namespace.  I'm using connect_requests as my controller for this purpose right now, but there are things in there that may be beneficial such as the part in the contact_requests just using a random password so that a user is created in the cases that an email does not already exist in the database.  

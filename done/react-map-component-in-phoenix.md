@@ -1,0 +1,31 @@
+# WHEN I go to the homepage, I see a navbar with the Drifter logo and a full page map
+
+* [x] maplibre-gl map is displaying in phoenix app
+*put the react component containing the tileserver.drifter.live map component in umbrella app which react was already working*
+
+All of the phoenix css is still showing in this version and it is not in the vanilla phoenix app.  Something in the css that came canned with the default phoenix app is causing there to be a margin or padding around the map.  Rather than trying to find WHAT css is causing this...
+
+* [x] ... put the same react component into the vanilla Phoenix app (I removed all of the canned css from this app)
+
+* [x] put a typescript component called main component in the assets directory
+
+* [x] install react from the assets directory of the vanilla app (commit and make a react branch first)
+*installed using the following:*
+```
+npm install --save react react-dom
+npm install --save-dev @types/react @types/react-dom
+```
+
+* [x] make a react component called main.tsx that does the same as the current main.ts file except using React
+
+* [x] edit `config/config.exs` to tell esbuild to look for app.jsx instead of app.js
+```
+~w(js/app.jsx --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*)
+```
+
+* [x] tailwind classes in the map div for full screen display of map... use:
+`w-screen h-screen`
+
+It's not full screen after I put w-screen in the outer div
+... and w-full in the inner div
+

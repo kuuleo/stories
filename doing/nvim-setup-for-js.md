@@ -1,0 +1,1 @@
+# Right now, I'm avoiding making jsx file because my nvim setup doesn't currently give me feedback like my txs files are.  I don't want to figure out how to get interfaces and other time consuming stuff just because of this.  So instead get nvim set up for regular js too.

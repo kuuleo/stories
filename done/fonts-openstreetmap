@@ -1,0 +1,38 @@
+Step 10: Generate Fonts for OpenStreetMap
+Download the OpenMapTiles fonts generation tool.
+
+cd ~
+
+git clone https://github.com/openmaptiles/fonts.git
+Install NodeJS.
+
+sudo apt install nodejs npm
+Install required nodejs module.
+
+cd fonts/
+
+npm install
+Generate fonts, which will be saved in the _output directory.
+
+node ./generate.js
+Move this directory to /var/www/.
+
+sudo mkdir -p /var/www/
+
+sudo mv _output/ /var/www/font-family/
+It’s also recommeneded to download the KlokanTech Noto Sans font family.
+
+cd ~
+
+git clone https://github.com/klokantech/klokantech-gl-fonts.git
+Move it to /var/www/font-family/ directory.
+
+sudo mv klokantech-gl-fonts/* /var/www/font-family/
+Some map styles expect the font name Klokantech Noto Sans, so we need to make a copy.
+
+cd /var/www/font-family/
+sudo cp -r KlokanTech\ Noto\ Sans\ Regular/ Klokantech\ Noto\ Sans\ Regular/
+sudo cp -r KlokanTech\ Noto\ Sans\ Bold/ Klokantech\ Noto\ Sans\ Bold
+sudo cp -r KlokanTech\ Noto\ Sans\ CJK\ Bold/ Klokantech\ Noto\ Sans\ CJK\ Bold/
+sudo cp -r KlokanTech\ Noto\ Sans\ CJK\ Regular/ Klokantech\ Noto\ Sans\ CJK\ Regular/
+sudo cp -r KlokanTech\ Noto\ Sans\ Italic/ Klokantech\ Noto\ Sans\ Italic/

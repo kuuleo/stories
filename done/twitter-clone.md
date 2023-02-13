@@ -1,19 +1,7 @@
 # Twitter clone using pure Phoenix
 
-* [ ] add Tabler icons as dependency
 
-* [ ] add {:tabler_icons, XXX} to the mix.exs file
-
-* [ ] add the heart for likes
-```
-<TablerIcons.heart />
-```
-
-* [ ] style it using tailwind for with tabler icons
-
-* [ ] add only the functional stuff into the template first and skip or just put plain divs for the style elements
-
-* [ ] add live routes for posts... make sure the route format is the same as this REF:
+* [x] add live routes for posts... make sure the route format is the same as this REF:
 https://github.com/Morzaram/phoenix-twitter-example-1.6/blob/main/lib/chirp_web/router.ex
 
 * [x] form.component.html.leex... is the video... check format of (Morzaram) REF
@@ -37,4 +25,12 @@ vvvv same I have mine saved as heex and text is the same as (Morzaram's)
 
 I think the form for the component is DrifterWeb.PostLive.PostComponent
 
-* [ ] compare my timeline files with the github example I have and look for differences that would trigger an update action every time I type... (Chris's) only update WHEN he hits save
+* [x] compare my timeline files with the github example I have and look for differences that would trigger an update action every time I type... (Chris's) only update WHEN he hits save
+vvvv I ran the example, and his is doing the same thing with the update showing up...
+
+I'm still not sure WHAT that IO in the code does...
+... When I update a post, WHY is it updating every keystroke and then WHEN I hit save, it does a mount... should be the timeline file...
+
+... maybe it's because I don't understand the assigns...
+
+* [x] add delete to my drifter/timeline.ex
